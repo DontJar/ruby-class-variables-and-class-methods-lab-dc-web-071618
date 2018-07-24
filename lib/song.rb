@@ -46,10 +46,10 @@ class Song
   def self.artist_count
     a_counts = {}
     @@artists.map do |x|
-      if a_counts.has_key?(x) == false
-        a_counts[x] = 1
-      else
+      if a_counts.has_key?(x)
         a_counts[x] += 1
+      else
+        a_counts[x] = 1        
       end
     end
     a_counts
